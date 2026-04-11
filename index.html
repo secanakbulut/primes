@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>primes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>primes</h1>
+      <p class="sub">prime number tools.</p>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="factor">factorize</button>
+    </nav>
+
+    <!-- factorize -->
+    <section id="tab-factor" class="panel active">
+      <div class="controls">
+        <label>n (up to 10^14)
+          <input id="factorIn" type="text" inputmode="numeric" value="600851475143" />
+        </label>
+        <button id="factorGo">factor</button>
+      </div>
+      <div id="factorOut" class="out"></div>
+      <p class="hint">trial division by 2, 3, then 6k +/- 1 up to sqrt n.</p>
+    </section>
+  </main>
+
+  <script src="src/sieve.js"></script>
+  <script src="src/factor.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
