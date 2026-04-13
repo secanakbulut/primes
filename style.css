@@ -51,6 +51,38 @@ header h1 {
 .panel { display: none; }
 .panel.active { display: block; }
 
+input[type=range] { width: 200px; }
+
+.num { color: #d4a017; font-size: 13px; }
+
+.canvas-wrap {
+  position: relative;
+  background: #08080a;
+  border: 1px solid #222;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: crosshair;
+}
+
+.readout {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #ccc;
+  pointer-events: none;
+}
+
 .controls {
   display: flex;
   gap: 14px;

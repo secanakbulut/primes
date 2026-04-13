@@ -4,3 +4,4 @@ node_modules/
 .vscode/
 *.log
 .final-stash/
+.final-stash/

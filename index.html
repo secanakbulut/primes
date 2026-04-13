@@ -14,11 +14,28 @@
     </header>
 
     <nav class="tabs" role="tablist">
-      <button class="tab active" data-tab="factor">factorize</button>
+      <button class="tab active" data-tab="spiral">ulam spiral</button>
+      <button class="tab" data-tab="factor">factorize</button>
     </nav>
 
+    <!-- ulam spiral -->
+    <section id="tab-spiral" class="panel active">
+      <div class="controls">
+        <label>max N
+          <input type="range" id="spiralN" min="100" max="250000" step="100" value="10000" />
+          <span class="num" id="spiralNVal">10000</span>
+        </label>
+        <button id="spiralDraw">draw</button>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="spiralCanvas" width="640" height="640"></canvas>
+        <div class="readout" id="spiralReadout">hover the canvas</div>
+      </div>
+      <p class="hint">walk the integers in a square spiral from the center, light up the primes. ulam noticed they pile onto diagonals.</p>
+    </section>
+
     <!-- factorize -->
-    <section id="tab-factor" class="panel active">
+    <section id="tab-factor" class="panel">
       <div class="controls">
         <label>n (up to 10^14)
           <input id="factorIn" type="text" inputmode="numeric" value="600851475143" />
@@ -32,6 +49,7 @@
 
   <script src="src/sieve.js"></script>
   <script src="src/factor.js"></script>
+  <script src="src/spiral.js"></script>
   <script src="src/app.js"></script>
 </body>
 </html>

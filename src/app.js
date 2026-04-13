@@ -1,7 +1,8 @@
-// glue: tabs + factor panel.
+// glue: tabs + spiral + factor.
 
 document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
+  setupSpiral();
   setupFactor();
 });
 
@@ -16,6 +17,22 @@ function setupTabs() {
       document.getElementById("tab-" + t.dataset.tab).classList.add("active");
     });
   });
+}
+
+function setupSpiral() {
+  const canvas = document.getElementById("spiralCanvas");
+  SpiralView.init(canvas);
+
+  const slider = document.getElementById("spiralN");
+  const val = document.getElementById("spiralNVal");
+  const draw = document.getElementById("spiralDraw");
+
+  slider.addEventListener("input", () => { val.textContent = slider.value; });
+  draw.addEventListener("click", () => {
+    SpiralView.draw(parseInt(slider.value, 10));
+  });
+
+  SpiralView.draw(parseInt(slider.value, 10));
 }
 
 function setupFactor() {
