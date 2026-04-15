@@ -127,6 +127,7 @@ button {
 }
 
 button:hover { background: #e3b32a; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .hint {
   color: #666;

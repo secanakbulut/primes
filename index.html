@@ -15,6 +15,7 @@
 
     <nav class="tabs" role="tablist">
       <button class="tab active" data-tab="spiral">ulam spiral</button>
+      <button class="tab" data-tab="sieve">sieve</button>
       <button class="tab" data-tab="factor">factorize</button>
     </nav>
 
@@ -32,6 +33,26 @@
         <div class="readout" id="spiralReadout">hover the canvas</div>
       </div>
       <p class="hint">walk the integers in a square spiral from the center, light up the primes. ulam noticed they pile onto diagonals.</p>
+    </section>
+
+    <!-- sieve -->
+    <section id="tab-sieve" class="panel">
+      <div class="controls">
+        <label>N
+          <input type="range" id="sieveN" min="50" max="2500" step="10" value="400" />
+          <span class="num" id="sieveNVal">400</span>
+        </label>
+        <label>speed
+          <input type="range" id="sieveSpeed" min="1" max="60" value="20" />
+        </label>
+        <button id="sieveStart">start</button>
+        <button id="sieveStep">step</button>
+        <button id="sieveReset">reset</button>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="sieveCanvas" width="640" height="640"></canvas>
+      </div>
+      <p class="hint" id="sieveStatus">pick the next unmarked number, cross off its multiples, repeat up to sqrt N.</p>
     </section>
 
     <!-- factorize -->
