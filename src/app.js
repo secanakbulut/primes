@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSpiral();
   setupSieve();
   setupFactor();
+  setupGaps();
 });
 
 function setupTabs() {
@@ -198,4 +199,19 @@ function setupFactor() {
   btn.addEventListener("click", run);
   inp.addEventListener("keydown", (e) => { if (e.key === "Enter") run(); });
   run();
+}
+
+function setupGaps() {
+  const canvas = document.getElementById("gapsCanvas");
+  GapsView.init(canvas);
+  const slider = document.getElementById("gapsN");
+  const val = document.getElementById("gapsNVal");
+  const btn = document.getElementById("gapsDraw");
+
+  slider.addEventListener("input", () => { val.textContent = slider.value; });
+  btn.addEventListener("click", () => {
+    GapsView.draw(parseInt(slider.value, 10));
+  });
+
+  GapsView.draw(parseInt(slider.value, 10));
 }

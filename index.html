@@ -17,6 +17,7 @@
       <button class="tab active" data-tab="spiral">ulam spiral</button>
       <button class="tab" data-tab="sieve">sieve</button>
       <button class="tab" data-tab="factor">factorize</button>
+      <button class="tab" data-tab="gaps">gaps</button>
     </nav>
 
     <!-- ulam spiral -->
@@ -66,11 +67,28 @@
       <div id="factorOut" class="out"></div>
       <p class="hint">trial division by 2, 3, then 6k +/- 1 up to sqrt n.</p>
     </section>
+
+    <!-- gaps -->
+    <section id="tab-gaps" class="panel">
+      <div class="controls">
+        <label>up to N
+          <input type="range" id="gapsN" min="1000" max="500000" step="1000" value="100000" />
+          <span class="num" id="gapsNVal">100000</span>
+        </label>
+        <button id="gapsDraw">plot</button>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="gapsCanvas" width="640" height="320"></canvas>
+      </div>
+      <div id="gapsStats" class="stats"></div>
+      <p class="hint">gap = p[i+1] minus p[i]. small early on, then it stretches. the longest below N is highlighted.</p>
+    </section>
   </main>
 
   <script src="src/sieve.js"></script>
   <script src="src/factor.js"></script>
   <script src="src/spiral.js"></script>
+  <script src="src/gaps.js"></script>
   <script src="src/app.js"></script>
 </body>
 </html>
