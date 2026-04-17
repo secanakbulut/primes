@@ -10,7 +10,7 @@
   <main>
     <header>
       <h1>primes</h1>
-      <p class="sub">prime number tools.</p>
+      <p class="sub">prime numbers, drawn four different ways.</p>
     </header>
 
     <nav class="tabs" role="tablist">
@@ -33,7 +33,7 @@
         <canvas id="spiralCanvas" width="640" height="640"></canvas>
         <div class="readout" id="spiralReadout">hover the canvas</div>
       </div>
-      <p class="hint">walk the integers in a square spiral from the center, light up the primes. ulam noticed they pile onto diagonals.</p>
+      <p class="hint">primes lit up. start at the center, walk in a square spiral. ulam noticed primes pile onto diagonals, and you can kind of see it here.</p>
     </section>
 
     <!-- sieve -->
@@ -53,7 +53,7 @@
       <div class="canvas-wrap">
         <canvas id="sieveCanvas" width="640" height="640"></canvas>
       </div>
-      <p class="hint" id="sieveStatus">pick the next unmarked number, cross off its multiples, repeat up to sqrt N.</p>
+      <p class="hint" id="sieveStatus">pick the next unmarked number, cross off all its multiples, repeat up to sqrt N.</p>
     </section>
 
     <!-- factorize -->
@@ -65,7 +65,7 @@
         <button id="factorGo">factor</button>
       </div>
       <div id="factorOut" class="out"></div>
-      <p class="hint">trial division by 2, 3, then 6k +/- 1 up to sqrt n.</p>
+      <p class="hint">trial division by 2, 3, then odd k up to sqrt n. fast enough for 10^14, slow for anything bigger.</p>
     </section>
 
     <!-- gaps -->
@@ -81,8 +81,12 @@
         <canvas id="gapsCanvas" width="640" height="320"></canvas>
       </div>
       <div id="gapsStats" class="stats"></div>
-      <p class="hint">gap = p[i+1] minus p[i]. small early on, then it stretches. the longest below N is highlighted.</p>
+      <p class="hint">gap = p[i+1] minus p[i]. small early on, then it stretches. the longest gap below N is highlighted.</p>
     </section>
+
+    <footer>
+      <p>built april 2026. <a href="https://github.com/secanakbulut/primes">source</a>.</p>
+    </footer>
   </main>
 
   <script src="src/sieve.js"></script>
