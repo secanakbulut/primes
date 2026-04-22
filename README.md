@@ -1,5 +1,7 @@
 # primes
 
+![](docs/screenshot.png)
+
 Four small visual tools for prime numbers. No build step, no dependencies, just a html file and some canvas drawing.
 
 I have always liked the Ulam spiral, the way primes seem to pile onto diagonals when you wind the integers into a square. So I built that, and then it felt natural to bolt on the other things people usually want when they start poking at primes: a sieve, a factorizer, and a gap plot.
