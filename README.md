@@ -1,6 +1,9 @@
 # primes
 
-![](docs/screenshot.png)
+<p align="center">
+  <img src="docs/screenshot.png" width="48%"/>
+  <img src="docs/screenshot-2.png" width="48%"/>
+</p>
 
 Four small visual tools for prime numbers. No build step, no dependencies, just a html file and some canvas drawing.
 
